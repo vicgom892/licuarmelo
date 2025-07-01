@@ -11,7 +11,7 @@ window.addEventListener('scroll', function(){
         header.classList.add('header-fix-2');
     }
     else(
-        header.classList.remove('header-fix-2')
+        header.classList.remove('header-fix')
     )
     lastScrollY = currentScrollY;
 });

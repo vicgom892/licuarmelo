@@ -9,7 +9,7 @@ const ASSETS_TO_CACHE = [
   '/manifest.json',
   '/js/app.js',
   '/js/script.js',
-  '/js/script-4.js',
+  '/js/script-2.js',
   '/js/instalar.js',
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png',

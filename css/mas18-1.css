@@ -39,7 +39,16 @@ a{
 h1, h2, h3 {
   font-family: var(--fuente-principal);
 }
-
+.color{
+    background: var(--color-oro);
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+}
+.color:hover{
+    background: var(--color-oro-oscuro);
+    color: var(--color-box);
+}
 /* === Header & Navegación === */
 /*header*/
 header.header-fix-2{
@@ -181,7 +190,7 @@ header.header-fix .navigation{
     width: 100%;
 }
 .menu li a{
-    padding: 20px;
+    padding: 10px;
     display: flex;
     margin: 0px;
     width: 100%;

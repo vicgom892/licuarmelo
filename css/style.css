@@ -16,7 +16,7 @@ ul{
     align-items: center;
 }
 li{
-    padding: 10px;
+    padding: 5px;
 }
 p{
      color: #8a8a8a;
@@ -24,6 +24,16 @@ p{
     font-size: 0.9rem;
     letter-spacing: 0.2px;
     max-width: 300px;
+}
+.color{
+    background: var(--main-color);
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+}
+.color:hover{
+    background: var(--main-dark);
+    color: var(--product-bg-color);
 }
 :root{
     --main-color:#9c8461;
@@ -182,7 +192,7 @@ header.header-fix .navigation{
     width: 100%;
 }
 .menu li a{
-    padding: 20px;
+    padding: 10px;
     display: flex;
     margin: 0px;
     width: 100%;
