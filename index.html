@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licu'Armelo</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff69b4">
+  <meta name="description" content="Licu'Armelo: Licuados personalizados para cumpleaños, eventos escolares y reuniones familiares. Frescura y sabor en cada sorbo.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Licu'Armelo">
+  <meta name="keywords" content="licuados, licuados artesanales, licuados para eventos, licuados para cumpleaños, combos de licuados, LicuArmelo, bebidas naturales, licuados con alcohol, licuados saludables">
+  <meta property="og:title" content="Licu'Armelo - Licuados para eventos con sabor y alegría">
+  <meta property="og:description" content="Licuados personalizados para cumpleaños, eventos escolares, reuniones familiares y celebraciones. ¡Sabores únicos y combos increíbles!">
+  <meta property="og:image" content="https://vicgom892.github.io/licuarmelo/images/cafe-logo.png">
+  <meta property="og:url" content="https://vicgom892.github.io/licuarmelo/">
+  <meta property="og:type" content="website">
+  <link rel="shortcut icon" href="images/cafe-logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="splash-screen" style="
+      position: fixed; inset: 0; background: #ffe4ec; 
+      display: flex; justify-content: center; align-items: center; 
+      flex-direction: column; z-index: 9999; overflow: hidden;
+      ">
+      <img src="images/cafe-logo.png" alt="Logo Licu'Armelo" class="splash-logo" />
+      <h1 class="splash-text">¡Preparando tu experiencia!</h1>
+    </div>
+
+    <style>
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.1); opacity: 1; }
+      }
+      @keyframes shine {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+      .splash-logo {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        animation: pulse 3s infinite;
+        position: relative;
+        overflow: hidden;
+      }
+      .splash-logo::before {
+        content: "";
+        position: absolute;
+        top: 0; left: -100%;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+        animation: shine 2.5s linear infinite;
+        pointer-events: none;
+      }
+      .splash-text {
+        margin-top: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+        color: #d6336c;
+        opacity: 0;
+        animation: fadeIn 2s forwards 0.8s;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+    <!---main++++++++++++++++++++++++++++++++++++-->
+    <section id="main">
+        <!--header-->
+        <header>
+            <!--navigation-->
+            <nav class="navigation">
+                <!--menu-btn-->
+                <input type="checkbox" id="menu-btn" class="menu-btn">
+                <label for="menu-btn" class="menu-icon">
+                    <img src="images/icon-menu.png" alt="" class="img-bar">
+                </label>
+                <!--menu-->
+                <div class="side-menu">
+                    <div class="menu-container">
+                        <strong>Menu Principal</strong>
+                        <!--close-btn-->
+                        <label for="menu-btn" class="close-btn">
+                            <img src="images/close-menu.webp" alt="" class="img-bar"> 
+                        </label>
+                        <!--menu-list-->
+                        <ul class="menu">
+                            <li><a href="#main">Inicio</a></li>
+                            <li><a href="#popular">Menu Base</a></li>
+                            <li><a href="#shopping-banner">Combos</a></li>
+                            <li><a href="#envio">Envios</a></li>
+                            <li><a href="#chatbot">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                 <!--logo-->
+                <a href="#" class="logo">
+                    <h2>Licu'Armelo</h2>
+                </a>
+                <!--logo-->
+                <a href="#" class="logo-1">
+                    <img src="images/cafe-logo.png" alt="logo" class="logo">
+                </a>
+            </nav>
+        </header>
+        <!--main-content++++++++++++++++++-->
+        <div class="main-content">
+            <!--text-->
+            <div class="main-content-text">
+                <strong>Licu'Armelo</strong>
+                <h1>Sabor que se arma <br> Momentos que se  Comparten</h1>
+                <p>"En Licu'Armelo, cada licuado es una creación única, armada con los sabores que amas y la frescura que mereces. Comparte momentos, risas y alegría con cada sorbo, porque aquí no solo mezclamos ingredientes, ¡creamos experiencias para disfrutar juntos!"</p>
+               <!-- <span>$14.50</span>
+                <a href="#">ADD to Cart</a> -->
+            </div>
+            <!--img-->
+            <div class="main-content-img">
+                <img src="images/inicio-banner.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!--popular++++++++++++++++++++++++++++++++++-->
+    <section id="popular">
+        <!--hesdding-->
+        <h2>🥤 Menú Base - Licu’Armelo</h2>
+        <p>Los Licuados Más Populares</p>
+        <!--container-->
+        <div class="popular-container">
+            <!--product-container-->
+            <div class="popular-product-container">
+                <!--box1-->
+                <div class="product-box">
+                    <!--img-->
+                    <div class="product-box-img">
+                        <img src="images/img-4.jpg" alt="">
+                        <span>Nuevo</span>
+                    </div>
+                    <!--text-->
+                    <div class="produc-box-text">
+                        <a href="#" class="product-text-title">Bananísima 🍌</a>
+                        <p>Banana + leche o yogur Cremoso, clásico y lleno de energía.</p>
+                        <!--<span>20$ <del>40$</del></span>-->
+                    </div>
+                </div>
+                <!--box2-->
+                <div class="product-box">
+                    <!--img-->
+                    <div class="product-box-img">
+                        <img src="images/img-5.jpg" alt="">
+                        <span>News</span>
+                    </div>
+                    <!--text-->
+                    <div class="product-box-text">
+                        <a href="#" class="product-text-title">Dulce Dúo 🍑🍌</a>
+                        <p>Durazno + banana + leche Suave y frutal, el favorito de los más peques.</p>
+                        <!--<span>20$ <del>40$</del></span>-->
+                    </div>
+                </div>
+                <!--box3-->
+                <div class="product-box">
+                    <!--img-->
+                    <div class="product-box-img">
+                        <img src="images/img-4.jpg" alt="">
+                        <span>News</span>
+                    </div>
+                    <!--text-->
+                    <div class="product-box-text">
+                        <a href="#" class="product-text-title">Frutibomba 🍓🍎</a>
+                        <p>Frutilla + manzana + agua o jugo Liviano, refrescante y con mucho sabor.</p>
+                        <!--<span>20$ <del>40$</del></span>-->
+                    </div>
+                </div>
+                <!--box4-->
+                <div class="product-box">
+                    <!--img-->
+                    <div class="product-box-img">
+                        <img src="images/img-10.jpg" alt="">
+                        <span>News</span>
+                    </div>
+                    <!--text-->
+                    <div class="product-box-text">
+                        <a href="#" class="product-text-title">Peralinda 🍐🍌</a>
+                        <p>Pera + banana + yogur Naturalmente dulce y cremosa.</p>
+                        <!--<span>20$ <del>40$</del></span>-->
+                    </div>
+                </div>
+                <!--box5-->
+                <div class="product-box">
+                    <!--img-->
+                    <div class="product-box-img">
+                        <img src="images/img-8.jpg" alt="">
+                        <span>News</span>
+                    </div>
+                    <!--text-->
+                    <div class="product-box-text">
+                        <a href="#" class="product-text-title">Rojito Mix 🍓</a>
+                        <p>Frutilla + arándanos + leche o agua Una explosión frutal con toque ácido.</p>
+                        <!--<span>20$ <del>40$</del></span>-->
+                    </div>
+                </div>
+                <!--box6-->
+                <div class="product-box">
+                    <!--img-->
+                    <div class="product-box-img">
+                        <img src="images/img-11.jpg" alt="">
+                        <span>News</span>
+                    </div>
+                    <!--text-->
+                    <div class="produc-box-text">
+                        <a href="#" class="product-text-title">Manzanazo 🍎🍌</a>
+                        <p>Manzana + banana + yogur Nutritivo, sabroso y bien rendidor.</p>
+                       <!--<span>20$ <del>40$</del></span>-->
+                    </div>
+                </div>
+            </div>
+            <!--banner+++++++++++++++++++++++++++++++++-->
+            <div class="popular-banner">
+                <!--text-->
+                <div class="popular-banner-text">
+                    <h2> Menú y Combos</h2>
+                    <h3>Para todo tipo de Eventos</h3>
+                    <a href="#"><p>👉 Cumpleaños</p></a>
+                    <a href="#"><p>👉 Egresados </p></a>
+                    <a href="#"><p>👉 Familiar  </p></a>
+                    <a href="#"><p>👉 Juntadas</p></a>
+                </div>
+                <!--img-->
+                <div class="popular-banner-img">
+                    <img src="images/img5.jpg" alt="">
+                </div>
+                <a href="#">Licu’Armelo</a>
+            </div>
+        </div>
+    </section>
+    <!--banner+++++++++++++++++++++++++++++++++++-->
+    <section id="shopping-banner">
+        <div class="shopping-banner-container">
+            <!--text-->
+            <div class="shopping-banner-text">
+                <strong>Combos Familiares y Grupales para Disfrutar Juntos</strong>
+                <h3> Licu’Armelo tiene la mejor opción para cada reunión y evento</h3>
+                <p>Disfrutá sabores naturales y frescos con nuestros combos especiales, diseñados para compartir en cumpleaños, eventos escolares y reuniones familiares. ¡Calidad, sabor y precio justo en cada sorbo!</p>
+                <!--<a href="#">Shop Now</a>-->
+            </div>
+            <!--img-->
+            <div class="shopping-banner-img">
+                <img src="images/combos-banner.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Sección: Ofertas Familiares -->
+  <section id="ofertas-familiares">
+    <h2>Ofertas de Combos Licu’Armelo</h2>
+    <div class="recent-product-container">
+      <div class="product-box">
+        <div class="product-box-img">
+          <img src="images/cafe-logo.png" alt="Combo Mini" loading="lazy">
+          <span>News</span>
+        </div>
+        <div class="product-box-text">
+          <a href="#" class="product-text-title">Combo Mini</a>
+          <p>10 licuados a elección. Vasos y sorbetes incluidos, ideal para grupos pequeños.</p>
+        </div>
+      </div>
+      <div class="product-box">
+        <div class="product-box-img">
+          <img src="images/cafe-logo.png" alt="Combo Teen" loading="lazy">
+          <span>News</span>
+        </div>
+        <div class="product-box-text">
+          <a href="#" class="product-text-title">Combo Teen</a>
+          <p>15 licuados personalizados con vasos tematizados. Variedad de sabores cremosos y refrescantes.</p>
+        </div>
+      </div>
+      <div class="product-box">
+        <div class="product-box-img">
+          <img src="images/cafe-logo.png" alt="Combo Fiesta Familiar" loading="lazy">
+          <span>News</span>
+        </div>
+        <div class="product-box-text">
+          <a href="#" class="product-text-title">Combo Fiesta Familiar</a>
+          <p>25 licuados + 5 yogures con frutas. Opciones saludables y presentación eco-friendly, perfecto para eventos.</p>
+        </div>
+      </div>
+      <div class="product-box">
+        <div class="product-box-img">
+          <img src="images/cafe-logo.png" alt="Combo Escolar Plus" loading="lazy">
+          <span>News</span>
+        </div>
+        <div class="product-box-text">
+          <a href="#" class="product-text-title">Combo Escolar Plus</a>
+          <p>20 licuados con personalización del colegio. Ideal para egresos y eventos escolares, con entrega puntual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Ofertas Especiales -->
+  <section id="ofertas-especiales">
+    <h2>Combos Especiales para Grandes Eventos</h2>
+    <div class="recent-product-container">
+      <div class="product-box">
+        <div class="product-box-img">
+          <img src="images/cafe-logo.png" alt="Combo Celebración Total" loading="lazy">
+          <span>News</span>
+        </div>
+        <div class="product-box-text">
+          <a href="#" class="product-text-title">Combo Celebración Total</a>
+          <p>30 licuados + snacks saludables. La mejor opción para grupos numerosos que buscan calidad y variedad.</p>
+        </div>
+      </div>
+      <div class="product-box">
+        <div class="product-box-img">
+          <img src="images/cafe-logo.png" alt="Combo Premium" loading="lazy">
+          <span>News</span>
+        </div>
+        <div class="product-box-text">
+          <a href="#" class="product-text-title">Combo Premium</a>
+          <p>40 licuados + 10 yogures con frutas. Para eventos especiales que requieren un servicio completo.</p>
+        </div>
+      </div>
+      <div class="product-box">
+        <div class="product-box-img">
+          <img src="images/cafe-logo.png" alt="Combo Exprés" loading="lazy">
+          <span>News</span>
+        </div>
+        <div class="product-box-text">
+          <a href="#" class="product-text-title">Combo Exprés</a>
+          <p>8 licuados individuales. Una opción rápida y económica para reuniones pequeñas, meriendas o visitas sorpresa.</p>
+        </div>
+      </div>
+      <div class="product-box">
+        <div class="product-box-img">
+          <img src="images/cafe-logo.png" alt="Combo Estación" loading="lazy">
+          <span>News</span>
+        </div>
+        <div class="product-box-text">
+          <a href="#" class="product-text-title">Combo Estación</a>
+          <p>20 licuados con frutas de temporada según la estación del año. Opción de base con leche, agua o yogur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+      <!--partner-logo+++++++++++++++++++++++++++++-->
+    <section id="partner">
+        <img src="images/banana.png" alt="banana">
+        <img src="images/cereza.jpg" alt="cereza">
+        <img src="images/manzana.png" alt="manzana">
+        <img src="images/mora-r.png" alt="mora">
+        <img src="images/pera.jpg" alt="pera">
+        <img src="images/uva.png" alt="uva">
+    </section>
+      <!-- seccion mas 18 -->
+    <section id="mayores-18" class="seccion-mayores">
+        <div class="contenedor-mayores">
+          <img src="images/cafe-logo-18-1.png" alt="Copa con licuado con alcohol" class="icono-licor">
+          <div class="texto-mayores">
+            <h2>¿Tenés ganas de algo distinto?</h2>
+            <p>Si querés agregar un toque de alcohol a tus licuados, <strong>ingresá acá</strong>. Tenemos algo especial para mayores de 18 años 🍸.</p>
+            <a href="mas18.html" class="btn-mas18">Descubrilo</a>
+          </div>
+        </div> 
+    </section>
+    <!-- Comentarios de Clientes -->
+    <section id="clientes" style="background:#111111; padding:60px 0;">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2 style="font-size:2.4rem; font-family:'Playfair Display', serif; color:#f5f5f5;">Comentarios de Nuestros Clientes</h2>
+        <p style="font-size:1.1rem; color:#f5f5f5;margin: auto;">Descubrí lo que dicen sobre <span class="licuarmelo-1">Licu'Armelo</span> _ After</p>
+      </div>
+      <div class="carousel-clientes" style="max-width:900px; margin:auto; overflow:hidden; position:relative;">
+        <div class="carousel-track" style="display:flex; animation: scroll 24s linear infinite;">   
+          <!-- Comentario 1 -->
+          <div style="min-width:100%; box-sizing:border-box; padding:20px; display:flex; flex-direction:column; align-items:center;">
+            <img src="images/callcenter1.jpg" alt="Cliente 1" style="width:100px; height:100px; border-radius:50%; object-fit:cover; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+            <blockquote style="margin-top:20px; font-size:1.1rem; font-style:italic; max-width:600px; color:#f8f8f8;">"¡El Tropical Gold fue un golazo en mi cumpleaños! Fresco, frutal y con el toque justo de ron. Todos querían repetir 😍🍹"</blockquote>
+            <span style="margin-top:10px; font-weight:bold; color:#8a6d3b;">— Sol Martínez, 28 años</span>
+          </div>
+          <!-- Comentario 2 -->
+          <div style="min-width:100%; box-sizing:border-box; padding:20px; display:flex; flex-direction:column; align-items:center;">
+            <img src="images/callcenter1.jpg" alt="Cliente 2" style="width:100px; height:100px; border-radius:50%; object-fit:cover; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+            <blockquote style="margin-top:20px; font-size:1.1rem; font-style:italic; max-width:600px; color:#f8f8f8;">"La Velvet Frutal me encantó. Suave, frutada y con vodka justo. Ideal para brindar con amigas 🍓💫"</blockquote>
+            <span style="margin-top:10px; font-weight:bold; color:#8a6d3b;">— Lucía Ramírez, 25 años</span>
+          </div>
+          <!-- Comentario 3 -->
+          <div style="min-width:100%; box-sizing:border-box; padding:20px; display:flex; flex-direction:column; align-items:center;">
+            <img src="images/callcenter.jpg" alt="Cliente 3" style="width:100px; height:100px; border-radius:50%; object-fit:cover; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+            <blockquote style="margin-top:20px; font-size:1.1rem; font-style:italic; max-width:600px; color: #f8f8f8;;">"Pedimos el Combo VIP y fue un éxito. Sabores únicos, súper frescos y una presentación top. ¡Recomendado al 100%! 🥂"</blockquote>
+            <span style="margin-top:10px; font-weight:bold; color:#8a6d3b;">— Martín Pereyra, 34 años</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CSS del carrusel -->
+    <style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      33.33% { transform: translateX(-100%); }
+      66.66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+    </style>
+    <!--services-->
+    <section id="envio">
+         <!--hesdding-->
+        <h3>🥤 Pedilo Tranqui - <span class="licuarmelo">Licu’Armelo</span> - Te lo Acerca</h3>       
+    <div class="services">
+        <!--box-->
+        <div class="service-box">
+            <span>🛵</span>
+            <h2>Envíos sin cargo</h2>
+            <span> ¡Delivery gratuito en moto, bici o auto!</span>
+            <p>Elegí tu combo y te lo llevamos sin costo adicional en zonas cercanas. Rápido, seguro y sustentable.</p>
+        </div>
+         <!--box-->
+        <div class="service-box">
+            <span>🤝</span>
+            <h2> Atención personalizada</h2>
+            <span> Te asesoramos según tu evento</span>
+            <p>Ya sea para un jardín, cumpleaños o reunión especial, te ayudamos a elegir el combo perfecto.</p>
+        </div>
+         <!--box-->
+        <div class="service-box">
+            <span>🛎️</span>
+            <h2>Atención al público</h2>
+            <span>Consultas ágiles por WhatsApp o redes</span>
+            <p>Hacemos que tu pedido sea fácil y claro. Estamos disponibles para lo que necesites.</p>
+        </div>
+    </div>
+    </section>  
+    <!--download app (optimizado)-->
+    <section id="download" style="background:#f5f5f5; padding: 40px 0;">
+        <div class="download-container" style=" margin:auto; display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; gap:20px;">
+            <!--imagen app-->
+            <div class="download-img" style="max-width:200px;">
+                <img src="images/cafe-logo.png" alt="App Licu’Armelo" style="width:100%; border-radius:20px; box-shadow:0 5px 15px rgba(0,0,0,0.15);">
+            </div>
+            <!--text-->
+            <div class="download-text" style="max-width:500px;">
+                <h3 style="font-size:2rem; margin-bottom: 15px; color:#2c2c2c;">Descargá la app exclusiva</h3>
+                <p style="font-size:1.1rem; margin-bottom: 25px; color:#444;">
+                    Accedé a promociones exclusivas, pedidos rápidos y eventos VIP.  
+                    Descargá nuestra app disponible en Google Play y App Store.
+                </p>
+                <div class="download-btns" style="display:flex; gap:20px;">
+                    <button id="installBtnTradicional" style="display: none;">
+                        <p class="button">Descargá La APP</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>  
+     <!--footer (optimizado)--> 
+    <footer style="background:#f8f8f8; margin-bottom: 30px; color:#d4af37; padding: 30px 20px; text-align:center; font-size:0.9rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <div class="footer-container">
+        <p>© 2025 Licu’Armelo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Chatbot burbuja -->
+    <div id="chatbot">
+      <div id="chatbot-header" onclick="toggleChatbot()">
+        <span>💬</span> <strong>Chatea con nosotros</strong>
+      </div>
+      <div id="chatbot-body" style="display:none;">
+        <div id="chatbot-messages">
+          <div class="bot-message">Hola! ¿En qué podemos ayudarte? Elige una opción o escribe tu consulta.</div>
+        </div>
+        <div id="chatbot-options">
+          <button onclick="sendPredefinedMsg('¿Cuáles son los combos disponibles?')">Combos disponibles</button>
+          <button onclick="sendPredefinedMsg('¿Hacen envíos sin cargo?')">Envíos</button>
+          <button onclick="sendPredefinedMsg('¿Cuál es el horario de atención?')">Horario</button>
+          <button onclick="sendPredefinedMsg('¿Tienen licuados con alcohol?')">Licuados +18</button>
+        </div>
+        <form id="chatbot-form" onsubmit="return sendUserMessage(event)">
+          <input type="text" id="user-name" placeholder="Tu nombre" required />
+          <textarea id="user-message" placeholder="Escribe tu consulta..." required></textarea>
+          <button type="submit">Enviar WhatsApp</button>
+        </form>
+      </div>
+    </div>
+
+<script src="js/instalar.js"></script>
+<script src="js/app.js"></script>
+<script src="js/script.js"></script>
+<script src="js/script-4.js"></script>
+<script>
+   window.addEventListener('load', () => {
+  setTimeout(() => {
+    const splash = document.getElementById('splash-screen');
+    if (!splash) return;
+    splash.style.transition = 'opacity 0.7s ease';
+    splash.style.opacity = 0;
+    setTimeout(() => {
+      splash.style.display = 'none';
+    }, 700);
+  }, 3500); // dura 3.5 segundos antes de ocultar
+});
+</script>
+</body>
+</html>
+
+
+
+   

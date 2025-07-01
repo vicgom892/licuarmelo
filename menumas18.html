@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Licu'Armelo +18 - Línea de Licuados con Alcohol</title>
+    <link rel="shortcut icon" href="images/cafe-logo.png">
+  <style>
+    :root {
+      --color-principal: #4a2c2a; /* marrón oscuro elegante */
+      --color-secundario: #f2ebe9; /* beige suave */
+      --color-acento: #b85c38; /* cobre sofisticado */
+      --color-texto: #3a2e2b;
+      --fondo: #fefcfb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: var(--fondo);
+      color: var(--color-texto);
+      padding: 25px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid var(--color-acento);
+      padding-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--color-principal);
+      letter-spacing: 2px;
+      font-weight: 700;
+      font-style: italic;
+      margin: 0;
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: var(--color-acento);
+      margin-top: 6px;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .combo-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .combo {
+      background-color: var(--color-secundario);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 6px 16px rgba(184, 92, 56, 0.25);
+      transition: transform 0.3s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .combo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 28px rgba(184, 92, 56, 0.45);
+    }
+
+    .combo img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      object-fit: cover;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    }
+
+    .combo h2 {
+      margin-top: 0;
+      color: var(--color-principal);
+      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--color-acento);
+      padding-bottom: 8px;
+      text-align: center;
+    }
+
+    .combo p.descripcion {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      line-height: 1.5;
+      text-align: center;
+      color: #5a4946;
+      font-style: italic;
+    }
+
+    .precios {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      gap: 15px;
+    }
+
+    .precio-item {
+      background-color: var(--color-acento);
+      color: white;
+      font-weight: 700;
+      font-size: 1.3rem;
+      padding: 12px 18px;
+      border-radius: 10px;
+      flex: 1;
+      text-align: center;
+      user-select: text;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .precio-item:hover {
+      background-color: #803a23;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 1rem;
+      color: var(--color-texto);
+      font-style: italic;
+    }
+
+    @media (max-width: 480px) {
+      .precios {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Licu'Armelo +18</h1>
+    <p>Línea de licuados con alcohol - ¡Para disfrutar con responsabilidad!</p>
+  </header>
+
+  <main>
+    <section class="combo-list" aria-label="Lista de licuados con alcohol">
+      
+      <article class="combo" tabindex="0">
+        <img src="https://via.placeholder.com/280x180?text=Vodka+Tropical" alt="Licuado con Vodka Tropical" />
+        <h2>Vodka Tropical</h2>
+        <p class="descripcion">Licuado refrescante con vodka, piña, maracuyá y toque de menta fresca.</p>
+        <div class="precios">
+          <div class="precio-item" title="Precio por unidad">Unidad: $[precio]</div>
+          <div class="precio-item" title="Oferta 2x1">2x1: $[precio promo]</div>
+        </div>
+      </article>
+
+      <article class="combo" tabindex="0">
+        <img src="https://via.placeholder.com/280x180?text=Ron+Caribeño" alt="Licuado con Ron Caribeño" />
+        <h2>Ron Caribeño</h2>
+        <p class="descripcion">Mezcla dulce de ron, mango, coco y canela para paladares exigentes.</p>
+        <div class="precios">
+          <div class="precio-item" title="Precio por unidad">Unidad: $[precio]</div>
+          <div class="precio-item" title="Oferta 2x1">2x1: $[precio promo]</div>
+        </div>
+      </article>
+
+      <article class="combo" tabindex="0">
+        <img src="https://via.placeholder.com/280x180?text=Gin+Berry" alt="Licuado Gin Berry" />
+        <h2>Gin Berry</h2>
+        <p class="descripcion">Gin premium con frutos rojos frescos y un toque cítrico único.</p>
+        <div class="precios">
+          <div class="precio-item" title="Precio por unidad">Unidad: $[precio]</div>
+          <div class="precio-item" title="Oferta 2x1">2x1: $[precio promo]</div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Disfrutá con responsabilidad. Prohibida la venta a menores de 18 años.</p>
+  </footer>
+</body>
+</html>

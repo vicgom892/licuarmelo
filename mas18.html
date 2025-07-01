@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Licu'Armelo +18 | Licuados con alcohol para fiestas y eventos</title>
+  <meta name="description" content="Licuados con alcohol únicos: vodka, ron, gin y frutas frescas. Solo para mayores de 18 años. Ideal para fiestas y eventos. Probá nuestros combos exclusivos.">
+  <meta name="keywords" content="licuados con alcohol, licuados +18, licuados para fiestas, licuados con ron, licuados con vodka, licuados premium, Licu'Armelo After">
+  <meta name="author" content="Licu'Armelo" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vicgom892.github.io/licuarmelo/mas18.html" />
+  <!-- Open Graph para Facebook y redes -->
+  <meta property="og:title" content="Licu'Armelo +18 | Licuados con alcohol para brindar diferente" />
+  <meta property="og:description" content="Descubrí nuestros licuados con vodka, ron y gin. Perfectos para celebraciones. Solo mayores de edad." />
+  <meta property="og:image" content="https://vicgom892.github.io/licuarmelo/images/premium-+18.png" />
+  <meta property="og:url" content="https://vicgom892.github.io/licuarmelo/mas18.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Licu'Armelo +18">
+  <meta name="twitter:description" content="Licuados con alcohol y frutas frescas. Probá los combos After. Solo mayores de 18.">
+  <meta name="twitter:image" content="https://vicgom892.github.io/licuarmelo/images/premium-+18.png">
+  <!-- App / PWA -->
+  <link rel="manifest" href="manifest-1.json">
+  <meta name="theme-color" content="#f8f8f8">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/cafe-logo-18-1.png" type="image/png">
+  <!-- Preconexiones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- Estilo principal -->
+  <link rel="stylesheet" href="css/mas18-1.css">
+
+  <style>
+    /* Modal de verificación de edad */
+    #age-verification-modal {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.9);
+      display: none; /* oculto por defecto */
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      color: white;
+      font-size: 1.2rem;
+      flex-direction: column;
+    }
+    #age-verification-modal > div {
+      background: white;
+      color: black;
+      padding: 25px 35px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 320px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+    #age-verification-modal button {
+      margin: 10px 15px 0 15px;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    #btn-age-yes {
+      background-color: #d4af37;
+      color: #1a1a1a;
+    }
+    #btn-age-yes:hover {
+      background-color: #b28f2b;
+    }
+    #btn-age-no {
+      background-color: #d32f2f;
+      color: white;
+    }
+    #btn-age-no:hover {
+      background-color: #a22828;
+    }
+  </style>
+</head>
+<body>
+  <!-- Modal de verificación de edad -->
+  <div id="age-verification-modal" role="dialog" aria-modal="true" aria-labelledby="age-verification-title">
+    <div>
+      <h2 id="age-verification-title">¿Tenés 18 años o más?</h2>
+      <button id="btn-age-yes" type="button">Sí</button>
+      <button id="btn-age-no" type="button">No</button>
+    </div>
+  </div>
+
+  <!-- Splash screen -->
+  <div id="splash-screen" style="display: none;">
+    <div style="height: 100vh; background-color: #1a1a1a; color: #d4af37; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+      <img src="images/cafe-logo-18-1.png" alt="Licu'Armelo After" style="width: 120px; animation: pulseSplash 2s infinite;">
+      <h1 style="font-family: 'Dancing Script', cursive; font-size: 2rem; margin-top: 20px;">Bienvenid@ a Licu’Armelo +18</h1>
+    </div>
+  </div>
+
+
+  <div id="main-content" style="display:none;">
+    <!-- Header con navegación cruzada -->
+    <header id="header">
+      <nav class="navigation">
+        <input type="checkbox" id="menu-btn" class="menu-btn" />
+        <label for="menu-btn" class="menu-icon">
+          <img src="images/icon-menu.png" alt="icono del menu" class="img-bar" />
+        </label>
+
+        <div class="side-menu">
+          <div class="menu-container">
+            <strong>Menu Principal</strong>
+            <label for="menu-btn" class="close-btn">
+              <img src="images/close-menu.webp" alt="icono del menu" class="img-bar" />
+            </label>
+            <ul class="menu">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Popular</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Recent</a></li>
+              <li><a href="index.html">Versión Sin Alcohol</a></li> <!-- Enlace espejo -->
+            </ul>
+          </div>
+        </div>
+
+        <a href="mas18.html" class="logo">
+          <h1>Licu'Armelo</h1>
+        </a>
+        <a href="mas18.html" class="logo-1">
+          <img src="images/cafe-logo-18-1.png" alt="logo Licuarmelo" />
+        </a>
+      </nav>
+    </header>
+
+    <!-- Aquí va TODO el contenido que ya tenías, tal cual -->
+    <!-- Desde el banner, secciones, combos, comentarios, app, etc. -->
+<section id="shopping-banner" style="background:#1a1a1a; color:#f5e1a4; padding: 40px 0;">
+    <div class="shopping-banner-container" style="display:flex; align-items:center; justify-content:space-around; max-width:1200px; margin:0 auto;">
+        <!--text-->
+        <div class="shopping-banner-text" style="max-width:600px;">
+            <strong style="font-size:1.6rem; color:#d4af37;">Menú +18 – Licu’Armelo After</strong>
+            <h3 style="font-size:2.2rem; margin: 15px 0; font-weight:700;">Sabores intensos para brindar diferente</h3>
+            <p style="font-size:1.1rem; line-height:1.6;">
+                Descubrí nuestra línea exclusiva de licuados con alcohol: una fusión única de frutas frescas y bebidas premium. 
+                Ideales para celebraciones, eventos nocturnos o brindar con estilo. 
+                <strong>Solo para mayores de 18 años.</strong> Disfrutá con responsabilidad.
+            </p>
+        </div>
+        <!--img-->
+        <div class="shopping-banner-img" style="max-width:400px;">
+            <img src="images/premium-+18.png" alt="Licuados Premium +18" style="width:100%; border-radius:12px; box-shadow: 0 0 15px #d4af37;">
+        </div>
+    </div>
+</section>
+
+    <!-- NUEVA SECCIÓN: QUIÉNES SOMOS -->
+    <section id="quienes-somos" style="padding:60px 20px; background:#fff;">
+      <div style="max-width:1000px; margin:auto; text-align:center;">
+        <h2 style="font-size:2.5rem; font-family:'Playfair Display'; color:#8a6d3b;">¿Quiénes somos en +18?</h2>
+        <p style="font-size:1.1rem; color:#444; max-width:700px; margin:auto;">
+          Somos una propuesta innovadora para adultos que buscan calidad, sabor y un toque de diversión. Combinamos frutas frescas con bebidas premium para crear experiencias únicas. ¡Brindá diferente!
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN LICUADOS PREMIUM +18 -->
+    <section id="blog" style="padding: 50px 0; max-width: 100%; margin: auto;">
+    <!--heading-->
+    <div class="blog-heading" style="text-align:center; margin-bottom: 40px;">
+        <h3 style="font-size:2rem; font-weight:700; color:#8a8a8a;">Licuados Premium +18</h3>
+    </div>
+    <!--container-blogs-->
+    <div class="blog-container" style="display:flex; justify-content:space-between; gap: 25px; flex-wrap: wrap;">
+        <!--box1-->
+        <div class="blog-box" style="flex:1; min-width: 280px; background:#f9f9f9; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow:hidden; position:relative;">
+            <!--Etiqueta +18 -->
+            <div style="position:absolute; top:10px; right:10px; background:#d32f2f; color:#fff; padding:4px 10px; font-weight:bold; border-radius:20px; font-size:0.85rem; z-index:10;">+18</div>
+
+            <!--img-->
+            <div class="blog-img" style="overflow:hidden;">
+                <img src="images/cafe-logo.png" alt="Tropical Gold" style="width:100%; height:200px; object-fit:contain;">
+            </div>
+            <!--text-->
+            <div class="blog-text" style="padding: 20px;">
+                <span style="color:#d4af37; font-weight:bold;">Tropical Gold</span>
+                <h2 class="blog-title" style="margin-top:10px; font-size:1.2rem; font-weight:700; color:#2c2c2c;">🍍 Ananá, mango y ron blanco premium. Decorado con lima y azúcar dorado.</h2>
+                <p style="font-size:1rem; color:#444; margin-top:8px;">Una fusión exótica de ananá y mango con ron blanco premium. Refrescante y vibrante, servido en copa con hielo y decorado con lima fresca. Ideal para quienes buscan un sabor tropical y suave.</p>
+            </div>
+        </div>
+
+        <!--box2-->
+        <div class="blog-box" style="flex:1; min-width: 280px; background:#f9f9f9; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow:hidden; position:relative;">
+            <div style="position:absolute; top:10px; right:10px; background:#d32f2f; color:#fff; padding:4px 10px; font-weight:bold; border-radius:20px; font-size:0.85rem; z-index:10;">+18</div>
+
+            <!--img-->
+            <div class="blog-img" style="overflow:hidden;">
+                <img src="images/cafe-logo.png" alt="Velvet Frutal" style="width:100%; height:200px; object-fit:contain;">
+            </div>
+            <!--text-->
+            <div class="blog-text" style="padding: 20px;">
+                <span style="color:#d4af37; font-weight:bold;">Velvet Frutal</span>
+                <h2 class="blog-title" style="margin-top:10px; font-size:1.2rem; font-weight:700; color:#2c2c2c;">🍓 Frutilla, arándanos y vodka suave. Con menta fresca y cristales de frutilla.</h2>
+                <p style="font-size:1rem; color:#444; margin-top:8px;">Una combinación intensa de frutilla y arándanos con vodka suave. Su textura aterciopelada y su aroma frutal hacen de este licuado una opción sofisticada y elegante. Perfecto para una noche especial.</p>
+            </div>
+        </div>
+
+        <!--box3-->
+        <div class="blog-box" style="flex:1; min-width: 280px; background:#f9f9f9; border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow:hidden; position:relative;">
+            <div style="position:absolute; top:10px; right:10px; background:#d32f2f; color:#fff; padding:4px 10px; font-weight:bold; border-radius:20px; font-size:0.85rem; z-index:10;">+18</div>
+
+            <!--img-->
+            <div class="blog-img" style="overflow:hidden;">
+                <img src="images/cafe-logo.png" alt="Cítrico Royal" style="width:100%; height:200px; object-fit:contain;">
+            </div>
+            <!--text-->
+            <div class="blog-text" style="padding: 20px;">
+                <span style="color:#d4af37; font-weight:bold;">Cítrico Royal</span>
+                <h2 class="blog-title" style="margin-top:10px; font-size:1.2rem; font-weight:700; color:#2c2c2c;">🍊 Naranja, limón y gin London Dry. Finalizado con rodajas cítricas y hielo triturado.</h2>
+                <p style="font-size:1rem; color:#444; margin-top:8px;">Una mezcla refrescante y vibrante que combina cítricos frescos con la intensidad del gin London Dry. Ideal para amantes del sabor ácido y sofisticado.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- SECCIÓN COMBOS EXCLUSIVOS PARA EVENTOS +18 -->
+    <section id="popular" style="background:#2c2c2c; color:#f5e1a4; padding: 50px 0;">
+    <div class="popular-container" style="max-width:1200px; margin:auto;">
+        <!--heading-->
+        <div class="popular-heading" style="text-align:center; margin-bottom:40px;">
+            <h2 style="font-size:2.4rem; font-weight:700; letter-spacing: 1.5px;">¡Descubrí nuestros combos exclusivos para eventos +18!</h2>
+            <p style="max-width:600px; margin:auto; font-size:1.2rem;">
+                Ideales para fiestas, cumpleaños y reuniones especiales. Pedí tu combo personalizado y sorprendé a tus invitados.
+            </p>
+        </div>
+
+        <!--combos box-->
+        <div class="popular-boxes" style="display:flex; justify-content:space-around; flex-wrap:wrap; gap:30px;">
+            <!--combo 1-->
+            <div class="combo-box" style="background:#444; padding:20px; border-radius:12px; width:300px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+                <h3 style="color:#d4af37; font-weight:700; margin-bottom:15px;">Combo Fiesta Tropical</h3>
+                <ul style="list-style:none; padding-left:0; font-size:1rem; line-height:1.5; color:#f5e1a4;">
+                    <li>• 3x Tropical Gold</li>
+                    <li>• 3x Velvet Frutal</li>
+                    <li>• 2x Cítrico Royal</li>
+                    <li>• Snack Gourmet a elección</li>
+                    <li>• Precio: $3500 ARS</li>
+                </ul>
+                <button style="background:#d4af37; border:none; color:#1a1a1a; padding:12px 25px; margin-top:15px; cursor:pointer; border-radius:6px; font-weight:bold;">
+                    Pedir Ahora
+                </button>
+            </div>
+            <!--combo 2-->
+            <div class="combo-box" style="background:#444; padding:20px; border-radius:12px; width:300px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+                <h3 style="color:#d4af37; font-weight:700; margin-bottom:15px;">Combo Noche VIP</h3>
+                <ul style="list-style:none; padding-left:0; font-size:1rem; line-height:1.5; color:#f5e1a4;">
+                    <li>• 4x Velvet Frutal</li>
+                    <li>• 3x Cítrico Royal</li>
+                    <li>• 1x Tropical Gold</li>
+                    <li>• Mix de frutos secos</li>
+                    <li>• Precio: $4200 ARS</li>
+                </ul>
+                <button style="background:#d4af37; border:none; color:#1a1a1a; padding:12px 25px; margin-top:15px; cursor:pointer; border-radius:6px; font-weight:bold;">
+                    Pedir Ahora
+                </button>
+            </div>
+            <!--combo 3-->
+            <div class="combo-box" style="background:#444; padding:20px; border-radius:12px; width:300px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+                <h3 style="color:#d4af37; font-weight:700; margin-bottom:15px;">Combo After Party</h3>
+                <ul style="list-style:none; padding-left:0; font-size:1rem; line-height:1.5; color:#f5e1a4;">
+                    <li>• 5x Cítrico Royal</li>
+                    <li>• 3x Tropical Gold</li>
+                    <li>• 2x Velvet Frutal</li>
+                    <li>• Mix dulce & salado</li>
+                    <li>• Precio: $4800 ARS</li>
+                </ul>
+                <button style="background:#d4af37; border:none; color:#1a1a1a; padding:12px 25px; margin-top:15px; cursor:pointer; border-radius:6px; font-weight:bold;">
+                    Pedir Ahora
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- NUEVA SECCIÓN: GALERÍA DE EVENTOS -->
+    <section id="galeria" style="padding: 60px 20px; background:#f9f9f9;">
+      <div style="text-align:center; margin-bottom:30px;">
+        <h2 style="font-size:2rem; color:#2c2c2c; font-family:'Playfair Display';">Galería de Eventos</h2>
+        <p style="color:#666; max-width:600px; margin:auto;">Algunas imágenes de nuestros brindis After más exitosos</p>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+        <img src="images/cafe-logo-18-1.png" alt="Evento 1" style="width:280px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.2);">
+        <img src="images/cafe-logo-18-1.png" alt="Evento 2" style="width:280px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.2);">
+        <img src="images/cafe-logo-18-1.png" alt="Evento 3" style="width:280px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.2);">
+      </div>
+    </section>
+
+    <!-- SECCIÓN COMBOS EXCLUSIVOS DE VENTA -->
+    <section id="combos" style="background-color:#fff4e0; padding:60px 20px;">
+  <div style="text-align:center; margin-bottom:50px;">
+    <h2 style="font-size:2.5rem; color:#2c2c2c; font-family:'Playfair Display', serif;">Combos Exclusivos</h2>
+    <p style="font-size:1.1rem; color:#5a4a3f; margin: auto;">Elegí tu combinación perfecta para cualquier celebración 🍓🥂</p>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; max-width:1200px; margin:auto;">
+
+    <!-- Combo 1 -->
+    <div style="background:#fff; border-radius:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1); max-width:300px; padding:30px; text-align:center; transition:transform 0.3s;">
+      <h3 style="font-size:1.5rem; color:#8a6d3b; font-family:'Playfair Display', serif; margin-bottom:15px;">Combo Gold</h3>
+      <ul style="list-style:none; padding:0; margin:0 0 20px 0; color:#444;">
+        <li>✨ 3 Licuados con Vodka</li>
+        <li>🍍 3 con Ron Frutal</li>
+        <li>🌟 Presentación Premium</li>
+      </ul>
+      <p style="font-size:1.2rem; font-weight:bold; color:#2c2c2c;">$9.500</p>
+    </div>
+
+    <!-- Combo 2 -->
+    <div style="background:#fff; border-radius:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1); max-width:300px; padding:30px; text-align:center; transition:transform 0.3s;">
+      <h3 style="font-size:1.5rem; color:#8a6d3b; font-family:'Playfair Display', serif; margin-bottom:15px;">Combo Sunset</h3>
+      <ul style="list-style:none; padding:0; margin:0 0 20px 0; color:#444;">
+        <li>🍓 2 Velvet Frutal</li>
+        <li>🍑 2 Peach Party</li>
+        <li>🍒 2 Licuados Gourmet</li>
+      </ul>
+      <p style="font-size:1.2rem; font-weight:bold; color:#2c2c2c;">$8.000</p>
+    </div>
+
+    <!-- Combo 3 -->
+    <div style="background:#fff; border-radius:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1); max-width:300px; padding:30px; text-align:center; transition:transform 0.3s;">
+      <h3 style="font-size:1.5rem; color:#8a6d3b; font-family:'Playfair Display', serif; margin-bottom:15px;">Combo VIP After</h3>
+      <ul style="list-style:none; padding:0; margin:0 0 20px 0; color:#444;">
+        <li>🍸 4 Licuados personalizados</li>
+        <li>🎉 Accesorios de fiesta</li>
+        <li>📦 Envío incluido</li>
+      </ul>
+      <p style="font-size:1.2rem; font-weight:bold; color:#2c2c2c;">$12.000</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- NUEVA SECCIÓN: PROMOCIONES VIGENTES -->
+    <section id="promos" style="padding: 60px 20px; background:#fff4e0;">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2 style="font-size:2.2rem; font-family:'Playfair Display'; color:#8a6d3b;">Promociones vigentes</h2>
+        <p style="color:#444; max-width:600px; margin:auto;">Aprovechá nuestras promos especiales para eventos, cumpleaños y pedidos grandes 🍹🎉</p>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:25px;">
+        <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); max-width:280px;">
+          <h3 style="color:#d32f2f;">2x1 After 22hs</h3>
+          <p>En licuados con gin. Válido viernes y sábados.</p>
+        </div>
+        <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); max-width:280px;">
+          <h3 style="color:#d32f2f;">Combo Party 10%</h3>
+          <p>Descuento por pedidos de más de $15.000</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMENTARIOS DE CLIENTES -->
+    <section id="clientes" style="background:#111111; padding:60px 0;">
+  <div style="text-align:center; margin-bottom:40px;">
+    <h2 style="font-size:2.4rem; font-family:'Playfair Display', serif; color:#f5f5f5;">Comentarios de Nuestros Clientes</h2>
+    <p style="font-size:1.1rem; color:#f5f5f5;margin: auto;">Descubrí lo que dicen sobre Licu'Armelo After</p>
+  </div>
+
+  <div class="carousel-clientes" style="max-width:900px; margin:auto; overflow:hidden; position:relative;">
+    <div class="carousel-track" style="display:flex; animation: scroll 24s linear infinite;">
+      
+      <!-- Comentario 1 -->
+      <div style="min-width:100%; box-sizing:border-box; padding:20px; display:flex; flex-direction:column; align-items:center;">
+        <img src="images/callcenter1.jpg" alt="Cliente 1" style="width:100px; height:100px; border-radius:50%; object-fit:cover; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+        <blockquote style="margin-top:20px; font-size:1.1rem; font-style:italic; max-width:600px; color:#f8f8f8;">"¡El Tropical Gold fue un golazo en mi cumpleaños! Fresco, frutal y con el toque justo de ron. Todos querían repetir 😍🍹"</blockquote>
+        <span style="margin-top:10px; font-weight:bold; color:#8a6d3b;">— Sol Martínez, 28 años</span>
+      </div>
+
+      <!-- Comentario 2 -->
+      <div style="min-width:100%; box-sizing:border-box; padding:20px; display:flex; flex-direction:column; align-items:center;">
+        <img src="images/callcenter1.jpg" alt="Cliente 2" style="width:100px; height:100px; border-radius:50%; object-fit:cover; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+        <blockquote style="margin-top:20px; font-size:1.1rem; font-style:italic; max-width:600px; color:#f8f8f8;">"La Velvet Frutal me encantó. Suave, frutada y con vodka justo. Ideal para brindar con amigas 🍓💫"</blockquote>
+        <span style="margin-top:10px; font-weight:bold; color:#8a6d3b;">— Lucía Ramírez, 25 años</span>
+      </div>
+
+      <!-- Comentario 3 -->
+      <div style="min-width:100%; box-sizing:border-box; padding:20px; display:flex; flex-direction:column; align-items:center;">
+        <img src="images/callcenter.jpg" alt="Cliente 3" style="width:100px; height:100px; border-radius:50%; object-fit:cover; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+        <blockquote style="margin-top:20px; font-size:1.1rem; font-style:italic; max-width:600px; color: #f8f8f8;;">"Pedimos el Combo VIP y fue un éxito. Sabores únicos, súper frescos y una presentación top. ¡Recomendado al 100%! 🥂"</blockquote>
+        <span style="margin-top:10px; font-weight:bold; color:#8a6d3b;">— Martín Pereyra, 34 años</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- NUEVA SECCIÓN: DÓNDE ENCONTRARNOS -->
+    <section id="ubicacion" style="padding:60px 20px; background:#f0f0f0;">
+      <div style="text-align:center; margin-bottom:30px;">
+        <h2 style="font-size:2rem; color:#2c2c2c; font-family:'Playfair Display';">¿Dónde encontrarnos?</h2>
+        <p style="color:#444; max-width:600px; margin:auto;">Estamos en ferias, fiestas privadas y entregas a domicilio. Consultá por WhatsApp 📍</p>
+      </div>
+      <div style="max-width:600px; margin:auto;">
+        <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: CONTACTO RÁPIDO -->
+    <section id="contacto" style="background:#fff; padding:60px 20px;">
+      <div style="text-align:center; max-width:600px; margin:auto;">
+        <h2 style="font-size:2rem; color:#2c2c2c; font-family:'Playfair Display';">¿Querés pedir? Escribinos</h2>
+        <p style="color:#666; margin-bottom:20px;">Completá tu nombre y consulta y te respondemos por WhatsApp 📲</p>
+        <form onsubmit="return sendUserMessage(event)">
+          <input type="text" id="user-name" placeholder="Tu nombre" required style="width:100%; padding:12px; margin-bottom:10px;">
+          <textarea id="user-message" placeholder="Mensaje..." required style="width:100%; padding:12px; height:120px;"></textarea>
+          <button type="submit" style="background:#d4af37; border:none; padding:12px 30px; margin-top:15px; font-weight:bold; border-radius:6px; cursor: pointer;">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD APP -->
+    <section id="download" style="background:#f5f5f5; padding: 40px 0;">
+    <div class="download-container" style="max-width:1100px; margin:auto; display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; gap:20px;">
+        <!--imagen app-->
+        <div class="download-img" style="max-width:400px;">
+            <img src="images/cafe-logo-18-1.png" alt="App Licu’Armelo +18" style="width:100%; border-radius:20px; box-shadow:0 5px 15px rgba(0,0,0,0.15);">
+        </div>
+        <!--text-->
+        <div class="download-text" style="max-width:500px;">
+            <h3 style="font-size:2rem; margin-bottom: 15px; color:#2c2c2c;">Descargá la app exclusiva +18</h3>
+            <p style="font-size:1.1rem; margin-bottom: 25px; color:#444;">
+                Accedé a promociones exclusivas, pedidos rápidos y eventos VIP.  
+                Descargá nuestra app disponible en Google Play y App Store.
+            </p>
+            <div class="download-btns" style="display:flex; gap:20px;">
+                <button id="installBtnPlus18" style="display: none;">
+                     <p class="button">Descargá La APP</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<a href="index.html" class="burbuja-logo" title="Ir a Licu'Armelo sin alcohol">
+  <img src="images/cafe-logo.png" alt="Logo Licu'Armelo">
+</a>
+
+
+    <!-- FOOTER -->
+    <footer style="background:#1a1a1a; color:#d4af37; padding: 20px 20px; text-align:center;">
+      <p>© 2025 Licu’Armelo. Todos los derechos reservados.</p><br>
+    </footer>
+
+  <!-- Scripts de control + edad + instalación -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById('age-verification-modal');
+      const mainContent = document.getElementById('main-content');
+      const btnYes = document.getElementById('btn-age-yes');
+      const btnNo = document.getElementById('btn-age-no');
+
+      if (localStorage.getItem("ageVerified") === "true") {
+        modal.style.display = 'none';
+        mainContent.style.display = 'block';
+      } else {
+        modal.style.display = 'flex';
+        mainContent.style.display = 'none';
+      }
+
+      btnYes.onclick = () => {
+        localStorage.setItem("ageVerified", "true");
+        modal.style.display = 'none';
+      
+        // Mostrar splash
+        const splash = document.getElementById('splash-screen');
+        splash.style.display = 'block';
+      
+        // Esperar 2.5 segundos y mostrar contenido principal
+        setTimeout(() => {
+          splash.style.display = 'none';
+          mainContent.style.display = 'block';
+        }, 2500);
+      };
+
+
+      btnNo.onclick = () => {
+        alert("No podés ingresar a esta sección. Serás redirigido.");
+        window.location.href = "index.html";
+      };
+    });
+  </script>
+  <script src="js/instalar-1.js" defer></script>
+  <script src="js/app-1.js" defer></script>
+  <script src="js/script-4.js" defer></script>
+  <script src="js/script-2.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Licu'Armelo +18 - Licuados con Alcohol</title>
+  <link rel="stylesheet" href="css/menu-mas-18.css" />
+    <link rel="shortcut icon" href="images/cafe-logo.png">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/cafe-logo-18-1.png" alt="Logo Licu'Armelo +18" class="logo">
+      <h1>Licu'Armelo +18</h1>
+      <p class="slogan">¡Licuados con vodka, gin y ron para celebrar!</p>
+      <p style="color:red; font-weight:bold; margin-top: 10px;">🚫 Solo para mayores de 18 años</p>
+    </header>
+
+    <main>
+      <section class="menu">
+        <div class="menu-column">
+          <h2>Combos con alcohol</h2>
+          <ul>
+            <li>
+              <strong>Gin Berry</strong> <span>$2800</span><br>
+              Gin, frutos rojos, tónica<br>
+              <button onclick="pedirCombo('Gin Berry', 'Gin, frutos rojos, tónica', 2800)">Pedir por WhatsApp</button>
+            </li>
+            <li>
+              <strong>Vodka Tropical</strong> <span>$2700</span><br>
+              Vodka, mango, jugo de maracuyá<br>
+              <button onclick="pedirCombo('Vodka Tropical', 'Vodka, mango, jugo de maracuyá', 2700)">Pedir por WhatsApp</button>
+            </li>
+            <li>
+              <strong>Ron Frutal</strong> <span>$2600</span><br>
+              Ron, banana, ananá<br>
+              <button onclick="pedirCombo('Ron Frutal', 'Ron, banana, ananá', 2600)">Pedir por WhatsApp</button>
+            </li>
+            <li>
+              <strong>Gin Garden</strong> <span>$2900</span><br>
+              Gin, pepino, limón, menta<br>
+              <button onclick="pedirCombo('Gin Garden', 'Gin, pepino, limón, menta', 2900)">Pedir por WhatsApp</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-column">
+          <h2>¡Creá tu mix +18!</h2>
+          <form id="custom-form" onsubmit="enviarPedido(event)">
+            <label>Base alcohólica:</label>
+            <select id="baseLicuado" required>
+              <option value="">Elegí una base</option>
+              <option>Vodka</option>
+              <option>Gin</option>
+              <option>Ron</option>
+            </select>
+
+            <label>Ingredientes:</label>
+            <div class="ingredientes">
+              <label><input type="checkbox" value="Frutilla"> Frutilla</label>
+              <label><input type="checkbox" value="Banana"> Banana</label>
+              <label><input type="checkbox" value="Pepino"> Pepino</label>
+              <label><input type="checkbox" value="Menta"> Menta</label>
+              <label><input type="checkbox" value="Ananá"> Ananá</label>
+              <label><input type="checkbox" value="Maracuyá"> Maracuyá</label>
+            </div>
+
+            <p class="precio">Precio: <span id="precio">$0</span></p>
+            <button type="submit">Pedir por WhatsApp</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="pedido-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Confirmar pedido</h2>
+        <label>Tu nombre:</label>
+        <input type="text" id="nombreCliente" placeholder="Ej: Juan" required>
+        <label>Tu número de teléfono:</label>
+        <input type="tel" id="telefonoCliente" placeholder="Ej: 11 4455 7788" required>
+        <div id="resumenPedido"></div>
+        <button onclick="confirmarPedido()">Confirmar pedido por WhatsApp</button>
+        <button onclick="cerrarModal()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+ <!-- Efecto inferior con copas flotando -->
+<div class="efecto-inferior" aria-hidden="true">
+  <div class="copa">🍸</div>
+  <div class="copa">🍷</div>
+  <div class="copa">🍹</div>
+  <div class="copa">🥂</div>
+</div>
+
+<!-- Burbujas doradas desde abajo -->
+<div class="burbuja" style="left: 15%; width: 12px; height: 12px; animation-delay: 0s;"></div>
+<div class="burbuja" style="left: 35%; width: 18px; height: 18px; animation-delay: 3s;"></div>
+<div class="burbuja" style="left: 55%; width: 10px; height: 10px; animation-delay: 1.5s;"></div>
+<div class="burbuja" style="left: 75%; width: 16px; height: 16px; animation-delay: 2s;"></div>
+<div class="burbuja" style="left: 90%; width: 14px; height: 14px; animation-delay: 0.5s;"></div>
+
+    <script>
+        window.addEventListener('load', () => {
+          document.body.classList.add('loaded');
+        });
+    </script>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

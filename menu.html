@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Licu'Armelo - Menú de Licuados</title>
+  <link rel="stylesheet" href="css/menu.css">
+    <link rel="shortcut icon" href="images/cafe-logo.png">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/cafe-logo.png" alt="Licu'Armelo Logo" class="logo">
+      <h1>Licu’Armelo</h1>
+      <p class="slogan">¡Tenemos los mejores licuados!</p>
+    </header>
+
+    <main>
+      <section class="menu">
+        <div class="menu-column">
+          <h2>Nuestros Combos</h2>
+          <ul>
+            <li>
+              <strong>Licuado Clásico</strong> <span>$1500</span><br>
+              Frutilla, banana, leche<br>
+              <button onclick="pedirCombo('Licuado Clásico', 'Frutilla, banana, leche', 1500)">Pedir por WhatsApp</button>
+            </li>
+            <li>
+              <strong>Tropical Mix</strong> <span>$1800</span><br>
+              Mango, ananá, jugo de naranja<br>
+              <button onclick="pedirCombo('Tropical Mix', 'Mango, ananá, jugo de naranja', 1800)">Pedir por WhatsApp</button>
+            </li>
+            <li>
+              <strong>Verde Power</strong> <span>$2000</span><br>
+              Espinaca, manzana verde, jengibre<br>
+              <button onclick="pedirCombo('Verde Power', 'Espinaca, manzana verde, jengibre', 2000)">Pedir por WhatsApp</button>
+            </li>
+            <li>
+              <strong>Choco-Vanilla</strong> <span>$1900</span><br>
+              Banana, cacao, vainilla<br>
+              <button onclick="pedirCombo('Choco-Vanilla', 'Banana, cacao, vainilla', 1900)">Pedir por WhatsApp</button>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="menu-column">
+          <h2>¡Armá el tuyo!</h2>
+           <form id="custom-form" onsubmit="enviarPedido(event)">
+                <label>Base (1):</label>
+                <select id="baseLicuado" required>
+                  <option value="">Seleccioná una base</option>
+                  <option>Leche</option>
+                  <option>Yogur</option>
+                  <option>Jugo de naranja</option>
+                  <option>Agua de coco</option>
+                </select>
+              
+                <label>Ingredientes:</label>
+                <div class="ingredientes">
+                  <label><input type="checkbox" value="Frutilla"> Frutilla</label>
+                  <label><input type="checkbox" value="Banana"> Banana</label>
+                  <label><input type="checkbox" value="Kiwi"> Kiwi</label>
+                  <label><input type="checkbox" value="Chía"> Chía</label>
+                  <label><input type="checkbox" value="Espinaca"> Espinaca</label>
+                  <label><input type="checkbox" value="Mango"> Mango</label>
+                </div>
+              
+                <p class="precio">Precio: <span id="precio">$0</span></p>
+                <button type="submit">Pedir por WhatsApp</button>
+            </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="pedido-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Confirmar pedido</h2>
+            <label>Tu nombre:</label>
+            <input type="text" id="nombreCliente" placeholder="Ej: Sofía" required>
+            <label>Tu número de teléfono:</label>
+            <input type="tel" id="telefonoCliente" placeholder="Ej: 11 2233 4455" required>
+            <div id="resumenPedido"></div>
+            <button onclick="confirmarPedido()">Confirmar pedido por WhatsApp</button>
+            <button onclick="cerrarModal()">Cancelar</button>
+        </div>
+    </div>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

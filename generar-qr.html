@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menú Licu'Armelo - Selección</title>
+    <link rel="shortcut icon" href="images/cafe-logo.png">
+  <style>
+    :root {
+      --color-principal: #ff6f61;
+      --color-secundario: #ffe9d6;
+      --color-acento: #4caf50;
+      --color-texto: #3a3a3a;
+      --fondo: #fff8f5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--fondo);
+      color: var(--color-texto);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 3rem;
+      color: var(--color-principal);
+      margin-bottom: 15px;
+      user-select: none;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      font-weight: 600;
+      color: var(--color-acento);
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    button {
+      background-color: var(--color-principal);
+      color: white;
+      border: none;
+      padding: 18px 30px;
+      font-size: 1.3rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: 'Brush Script MT', cursive;
+      box-shadow: 0 6px 12px rgba(255, 111, 97, 0.6);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      flex: 1 1 140px;
+      user-select: none;
+    }
+
+    button:hover {
+      background-color: #e65a4c;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-style: italic;
+      color: var(--color-texto);
+      font-size: 1rem;
+      user-select: none;
+    }
+
+    @media (max-width: 360px) {
+      button {
+        padding: 15px 20px;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Licu'Armelo</h1>
+  <p>Elegí tu menú para continuar</p>
+
+  <div class="btn-container">
+    <button id="btn-general">Menú General</button>
+    <button id="btn-mas18">Menú +18</button>
+  </div>
+
+  <footer>Disfrutá con responsabilidad y sabor.</footer>
+
+  <script>
+    // Cambia estas URLs a las que correspondan en tu servidor o local
+    const urlMenuGeneral = "https://tu-web.com/menu.html";
+    const urlMas18 = "https://tu-web.com/mas18.html";
+
+    document.getElementById('btn-general').addEventListener('click', () => {
+      window.location.href = urlMenuGeneral;
+    });
+
+    document.getElementById('btn-mas18').addEventListener('click', () => {
+      window.location.href = urlMas18;
+    });
+  </script>
+</body>
+</html>
