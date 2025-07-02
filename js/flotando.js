@@ -1,6 +1,6 @@
  function createFloatingFruit() {
             const fruit = document.createElement('img');
-            fruit.src = '/images/cafe-logo.png'; // Imagen de una fresa (puedes cambiar la URL)
+            fruit.src = './images/cafe-logo.png'; // Imagen de una fresa (puedes cambiar la URL)
             fruit.className = 'floating-fruit';
 
             // Posición inicial aleatoria
