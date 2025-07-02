@@ -475,3 +475,42 @@ footer {
     width: 90%;
   }
 }
+.floating-fruit {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            pointer-events: none;
+            animation: float 5s ease-in-out, fadeOut 5s forwards;
+            z-index: 1000;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(100px, -50px) rotate(10deg);
+            }
+            50% {
+                transform: translate(200px, 50px) rotate(-10deg);
+            }
+            75% {
+                transform: translate(150px, -30px) rotate(5deg);
+            }
+            100% {
+                transform: translate(300px, 0) rotate(0deg);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
